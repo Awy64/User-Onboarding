@@ -82,6 +82,7 @@ return(
         name="name" 
         value={formState.name}
         onChange={inputChange}
+        data-cy="name"
       />
       {errors.name.length > 0 ? <p className="error">{errors.name}</p> : null}
     </label>
@@ -92,6 +93,7 @@ return(
         name="email" 
         value={formState.email}
         onChange={inputChange}
+        data-cy="email"
       />
       {errors.email.length > 0 ? (
           <p className="error">{errors.email}</p>
@@ -104,6 +106,7 @@ return(
         name="password" 
         value={formState.password}
         onChange={inputChange}
+        data-cy="password"
       />
     </label>
     <label htmlFor="terms">Terms of Service 
@@ -113,9 +116,10 @@ return(
         name="terms"
         checked={formState.terms}
         onChange={inputChange}
+        data-cy="terms"
       />
     </label>
-    <button disabled={isBtnDisabled} type="submit">Submit</button>
+    <button disabled={isBtnDisabled} type="submit" data-cy="submit">Submit</button>
   </form>
     {users.map(users => {
       return(
